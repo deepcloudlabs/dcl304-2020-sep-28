@@ -1,0 +1,355 @@
+-9007199254740992 
+9007199254740992
+(0.1+0.2)+0.3
+0.1+(0.2+0.3)
+2-1.1
+100000000000000100
+x=x+50
+http://mathjs.org
+https://mikemcl.github.io/bignumber.js/
+
+===================================================================================
++ How to create object in javacript :
+===================================================================================
+
+x = new Object();
+x.color= "Red";
+x.name= "Jack";
+x.distance= 123.45;
+x.fun = function(){
+     console.log('Have fun!');  
+};
+
+x.fun();
+console.log(x.distance);
+console.log(typeof x);
+
+Object.prototype.test= 42;
+
+y = {
+  color: "Red",
+  name: "Jack",
+  distance: 123.45,
+  fun : function(){
+     console.log('Have fun!');  
+  }
+} ;
+
+y.fun();
+console.log(y.distance);
+console.log(typeof y);
+
+var Person = function(name,age){
+    this.name= name;
+    this.age= age;
+  
+    // return this;
+};
+
+var jack= new Person("Jack",44);
+console.log(jack.name);
+console.log(jack.age);
+
+var kate= new Person("Kate",34);
+console.log(kate.name);
+console.log(kate.age);
+
+Person.prototype.salary= 10000;
+
+console.log(kate.salary);
+console.log(jack.salary);
+
+===============================================================================
+x = new Number(42);
+y = new String("Jack");
+z = "Jack";
+m = new Array(4,8,15,16,23,42);
+t = false;
+
+===============================================================================
+var unit_circle = {
+  x : 0,
+  y : 0,
+  radius: 42,
+  color: "Red"
+} ;
+
+console.log(unit_circle['x']);
+console.log(unit_circle['y']);
+console.log(unit_circle['radius']);
+console.log(unit_circle['color']);
+
+for (prop in unit_circle){
+  console.log(unit_circle[prop]);
+}
+
+===============================================================================
+var unit_circle = {
+  x : 0,
+  y : 0,
+  radius: 42,
+  color: "Red"
+} ;
+
+var y= 3.14;
+var z= -1;
+
+unit_circle[y]= "what is this?";
+unit_circle[z]= "what is that?";
+console.log(unit_circle[y]);
+console.log(unit_circle[z]);
+
+==========================================================================
+var fun= function(){
+  console.log("Hello Moon!");
+};
+
+var gun = function(){
+  var counter=42;
+  return function(){
+    console.log("Have gun!"+counter++);
+  };
+};
+
+var run= gun();
+// run();
+
+setTimeout(run,1000); // functional
+console.log(counter);
+
+===========================================================================
+var fun= function(){
+   x=42;  
+};
+
+var gun= function(){
+   var y=108;  
+};
+
+gun();
+// console.log(y);
+fun();
+console.log(x);
+  // console.log(this);
+==========================================================================
+var Person = function(name,age){
+    if (!(this instanceof Person)){
+        return new Person(name,age);
+    }
+    this.name= name;
+    this.age= age; 
+	this.say = function(){
+      console.log(
+        "My age is ".concat(this.age));
+    } ;
+};
+
+var jack= new Person("Jack",44);
+var kate= Person("Kate",35);
+
+console.log(jack.name);
+console.log(jack.age);
+
+console.log(kate.name);
+console.log(kate.age);
+
+var Person = function(name,age){
+    this.name= name;
+    this.age= age; 
+	this.say = function(){
+      console.log("My age is ".concat(this.age));var 
+    } ;
+};
+
+==========================================================================
+var Person = function(name,age){
+    var self= this;
+    self.name= name;
+    self.age= age; 
+    self.say = function(){
+      console.log(
+        "My age is "
+           .concat(self.age));
+    } ;
+};
+
+var jack= new Person("Jack",44);
+jack.say();
+
+setTimeout(jack.say,1000);
+
+==========================================================================
++ Arrays
+
+var numbers= [4,8,15,16,23,42];
+console.log(numbers);
+console.log(numbers.length);
+
+var arr= new Array(4,8,15,16,23,42);
+console.log(arr);
+console.log(arr.length);
+
+var dizi= [3];// new Array(3);
+console.log(dizi);
+console.log(dizi.length);
+
+=========================================================================
++ Arrays
+
+var numbers= [4,8,15,16,23,42];
+numbers[100]= 100;
+//numbers.length=0;
+//numbers= [];
+numbers.splice(0);
+console.log(numbers);
+console.log(numbers.length);
+
+========================================================================
++ Arrays
+
+var numbers= [4,8,15,16,23,42];
+// console.log(typeof numbers);
+numbers['test']="Hello";
+numbers[1.1]="Have fun!";
+numbers.length= 8;
+console.log(numbers.length);
+/*
+for (var i=0;i<numbers.length;++i){
+  console.log(numbers[i]);
+}
+
+for (i in numbers){
+  console.log(i+": "+numbers[i]);
+}
+*/
+
+==========================================================================
++ Sorting integer arrays
+var asc= function(m,n){
+  console.log("asc is called!");
+  return m-n;
+};
+var des= function(m,n){
+  return n-m;
+};
+var numbers= [23,8,16,42,15,4];
+numbers.sort(asc);
+console.log(numbers);
+numbers.sort(des);
+console.log(numbers);
+
+==========================================================================
++ Sorting string arrays
+var des= function(m,n){
+  return n.localeCompare(m);
+};
+var cities= ["istanbul","ankara","izmir"];
+cities.sort(des);
+console.log(cities);
+console.log(Array.isArray(cities));
+
+========================================================================
+var unit= [
+    [1,0,0,1],
+    [0,1,0],
+    [0,0,1,0,0,1]
+];
+
+console.log(unit[2].length);
+console.log(unit.length);
+
+for (rw in unit){
+  var row= unit[rw];
+  for (cl in row){
+      console.log(row[cl]);
+  }
+}
+
+=============================================================
+var arrayMi= function(o){
+  return Object.prototype.toString.call(o) 
+    === "[object Array]";
+};
+
+var numbers= [4,8,15,16,23,42];
+var dizi= {length : 42};
+    
+console.log(arrayMi(numbers));
+console.log(arrayMi(dizi));
+
+var Person = function(name,age){
+    this.name= name;
+    this.age= age;
+  
+    // return this;
+};
+
+console.log(Person.prototype.constructor);
+
+==============================================================
+function fun(x,y,z){
+  console.log(x+","+y+","+z);
+}
+
+fun(1,2,3,4,5);
+fun(1,2,3,4);
+fun(1,2,3);
+fun(1,2);
+fun(1);
+fun();
+
+==============================================================
+var run= function(callback){
+  this[callback]();
+} 
+
+window.fun = function(){
+  console.log("Have fun!");
+}
+
+run("fun");
+
+=============================================================
+var no_letters= 
+    "abc123xyz45".replace(/[a-z]/gi,"");
+console.log(no_letters);
+
+>>> HOW TO SERIALIZE AND DESERIALIZE OBJECTS
+
+var json= JSON.stringify({
+  x: 0,
+  y: 0,
+  radius: 42,
+  color: "Red"
+});
+console.log(json);
+console.log(typeof json);
+var circle= JSON.parse(json);
+console.log(circle);
+console.log(typeof circle);
+
+>>> Information Hiding in JS
+
+var Person = function(_name,_age){
+    var self= this;
+    var name= _name;
+    var age= _age;
+  
+    self.getName= function(){
+      return name;
+    };
+    self.getAge= function(){
+      return age;
+    };
+	self.toJson= function(){
+	    var o= {
+		    "name": getName(), "age": getAge() 
+		} ;
+	    return JSON.stringify(o);
+	}
+	
+};
+
+var jack= new Person("Jack",44);
+console.log(jack.getName());
+console.log(jack.getAge());
