@@ -10,18 +10,21 @@
  8352 -> Secret
  Game Level: 9 -> Player wins game!
  */
-class Game {
+class Game { // Model
     constructor() {
         this.gameLevel = 3;
         this.tries = 0;
         this.secret = this.createSecret();
         this.moves = [];
     }
+
     play = (guess) => {
         guess = Number(guess);
-        if (guess === this.secret){
+        if (guess === this.secret) {
             this.gameLevel++;
-            //TODO: check whether the player wins the game
+            if (this.gameLevel == 10){
+                //TODO: Player wins the game!
+            }
             this.initializeGame()
             return;
         }
@@ -31,16 +34,54 @@ class Game {
     }
 
     createSecret = () => {
-        //TODO: implement secret generation logic
-        return 123;
+        let digits = [];
+        digits.push(this.createDigit(1, 9));
+        while (digits.length < this.gameLevel) {
+            let digit = this.createDigit(0, 9);
+            if (!digits.includes(digit))
+                digits.push(digit);
+        }
+        return Number(digits.join(''));
     }
 
     initializeGame = () => {
-        //TODO: initialize game
+        this.secret = this.createSecret();
+        this.tries = 0;
+        this.moves = [];
     }
 
     evaluateMove = (guess) => {
-        //TODO: evaluate guess
-        return "-1+1";
+        let guessAsStr = guess.toString();
+        let secretAsStr = this.secret.toString();
+        let perfectMatch = 0;
+        let partialMatch = 0;
+        for (let i = 0; i < guessAsStr.length; ++i) {
+            let g = guessAsStr.charAt(i);
+            for (let j = 0; j < secretAsStr.length; ++j) {
+                let s = secretAsStr.charAt(j);
+                if (g === s) {
+                    if (i === j) {
+                        perfectMatch++;
+                    } else {
+                        partialMatch++;
+                    }
+                }
+            }
+        }
+        return this.generateEvaluationString(perfectMatch, partialMatch);
+    }
+
+    generateEvaluationString = (perfectMatch, partialMatch) => {
+        if (perfectMatch == 0 && partialMatch == 0) return "No match";
+        let message = "";
+        if (partialMatch > 0)
+            message = `-${partialMatch}`;
+        if (perfectMatch > 0)
+            message = `${message}+${perfectMatch}`;
+        return message;
+    }
+
+    createDigit = (min, max) => {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 }
