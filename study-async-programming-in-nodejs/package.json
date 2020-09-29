@@ -1,0 +1,12 @@
+{
+  "name": "study-async-programming-in-nodejs",
+  "version": "1.0.0",
+  "description": "First nodejs application",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "test": "node server.js"
+  },
+  "author": "Binnur Kurt <binnur.kurt@gmail.com>",
+  "license": "MIT"
+}
