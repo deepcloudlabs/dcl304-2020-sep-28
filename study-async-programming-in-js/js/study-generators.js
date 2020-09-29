@@ -19,3 +19,20 @@ function* draw() { // generator function
 for (let number of draw()) {
     console.log(`number: ${number}`);
 }
+
+function* filter(items, fn) {
+    for (let item of items) {
+        if (fn(item))
+            yield item;
+    }
+}
+
+function* map(items, fn) {
+    for (let item of items) {
+        yield fn(item);
+    }
+}
+
+numbers = [4, 8, 15, 16, 23, 42]
+for (let num of map(filter(numbers, x => x%2 == 0), y => y* y))
+    console.log(num)
