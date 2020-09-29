@@ -32,4 +32,9 @@ let draw = function (id) { // async
 for (let i = 1; i <= 10; ++i)
     draw(i).then((numbers) => console.log(numbers))
         .catch((err) => console.error(err))
+
+let sun = async () =>{
+ let lotteryNumbers = await Promise.all([draw(1),draw(2),draw(3),draw(4)]);
+}
+
 console.log("for loop has ended!")
