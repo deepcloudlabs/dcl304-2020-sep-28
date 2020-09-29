@@ -3,18 +3,32 @@ class MastermindController {
         this.game = game;
         this.spanGameLevel = document.querySelector("#gameLevel");
         this.spanTries = document.querySelector("#tries");
+        this.spanCounter = document.querySelector("#counter");
         this.inputTextGuess = document.querySelector("#guess");
         this.playBtn = document.querySelector("#playBtn");
         this.movesBody = document.querySelector("#movesBody");
+        let item = localStorage.getItem("game");
+        if (item != null) {
+            let gameItem = JSON.parse(item);
+            this.game.gameLevel = gameItem.gameLevel;
+            this.game.initializeGame();
+        }
+        this.updateView();
         this.playBtn.addEventListener('click', () => {
             game.play(Number(this.inputTextGuess.value));
             this.updateView();
+            localStorage.setItem("game", JSON.stringify(this.game))
         }, false);
+        setInterval(() => {
+            this.game.countDown();
+            this.updateView();
+        }, 1000);
     }
 
     updateView = () => {
         this.spanTries.innerText = this.game.tries;
         this.spanGameLevel.innerText = this.game.gameLevel;
+        this.spanCounter.innerText = this.game.counter;
         this.emptyElement(this.movesBody);
         for (let move of this.game.moves) {
             let tr = this.movesBody.insertRow();

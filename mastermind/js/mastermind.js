@@ -16,6 +16,7 @@ class Game { // Model
         this.tries = 0;
         this.secret = this.createSecret();
         this.moves = [];
+        this.counter = 60;
     }
 
     play = (guess) => {
@@ -33,6 +34,13 @@ class Game { // Model
         this.moves.push(new Move(guess, evaluation));
     }
 
+    countDown = () => {
+        this.counter--;
+        if (this.counter <= 0){
+            this.initializeGame();
+        }
+    }
+
     createSecret = () => {
         let digits = [];
         digits.push(this.createDigit(1, 9));
@@ -41,6 +49,7 @@ class Game { // Model
             if (!digits.includes(digit))
                 digits.push(digit);
         }
+        console.log(digits);
         return Number(digits.join(''));
     }
 
@@ -48,6 +57,7 @@ class Game { // Model
         this.secret = this.createSecret();
         this.tries = 0;
         this.moves = [];
+        this.counter = 60;
     }
 
     evaluateMove = (guess) => {
