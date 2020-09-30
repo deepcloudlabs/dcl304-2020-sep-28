@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import utils from "./utils";
 
 const mongodb_url = "mongodb://localhost:27017/hrdb";
 const mongo_opts = {
@@ -20,16 +21,25 @@ const employeeSchema = new mongoose.Schema({
     "identityNo": {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        validate: [
+            utils.tcKimlikNoValidator,
+            'You must provide a valid identity no'
+        ]
     },
     "photo": {
         type: String,
-        required: true
+        required: false,
+        default: utils.NO_IMAGE
     },
     "iban": {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        validate: [
+            utils.ibanValidator(),
+            'You must provide a valid iban'
+        ]
     },
     "birthYear": {
         type: Number,
@@ -52,3 +62,5 @@ const employeeSchema = new mongoose.Schema({
         default: "Finance"
     }
 });
+
+const Employee = mongoose.model('employees', employeeSchema);
