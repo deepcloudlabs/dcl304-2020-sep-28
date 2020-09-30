@@ -151,7 +151,7 @@ api.delete("/hr/api/v1/employees/:identity", (req, res) => {
     Employee.findOneAndDelete(
         {'identityNo': identity},
         {_id: false},
-        (err, emp) => { // async
+        async (err, emp) => { // async
             res.set("Content-Type", "application/json");
             if (err) {
                 res.status(404).send({"status": err})
