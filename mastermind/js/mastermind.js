@@ -10,7 +10,9 @@
  8352 -> Secret
  Game Level: 9 -> Player wins game!
  */
-class Game { // Model
+import {Move} from "./move.js";
+
+export class Game { // Model
     constructor() {
         this.gameLevel = 3;
         this.tries = 0;

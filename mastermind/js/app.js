@@ -1,3 +1,6 @@
+import {Game} from "./mastermind.js";
+import {Move} from "./move.js";
+
 class MastermindController {
     constructor(game) {
         this.game = game;
@@ -52,8 +55,8 @@ class MastermindController {
     }
 }
 
+let game = new Game(); // Model
 window.onload = () => {
     console.log("App is started...");
-    let game = new Game(); // Model
     let controller = new MastermindController(game);
 }

@@ -5,12 +5,14 @@
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
-    "test": "node server.js"
+    "lottery": "nodemon lottery.js"
   },
   "author": "Binnur Kurt <binnur.kurt@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.17.1",
     "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.4",
     "ws": "^7.3.1"
   }
 }
