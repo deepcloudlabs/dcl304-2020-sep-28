@@ -3,6 +3,9 @@ import utils from "./utils";
 import bodyParser from "body-parser";
 import logger from "morgan";
 import express from "express";
+import swaggerUi from "swagger-ui-express";
+import openApiDoc from "./swagger-hr-api.json";
+
 /*
     Creating REST Api using Express.js
  */
@@ -21,7 +24,7 @@ api.use(function(req,res,next){
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 })
-
+api.use("/api-docs", swaggerUi.serve, swaggerUi.setup(openApiDoc))
 /*
      Persistence with MongoDB using Mongoose Library
  */
@@ -36,7 +39,10 @@ const mongo_opts = { // Dictionary
 mongoose.connect(mongodb_url, mongo_opts);
 
 const employeeSchema = new mongoose.Schema({
-    "_id": mongoose.Schema.Types.ObjectId,
+    "_id": {
+        type: String,
+        required: true
+    },
     "fullname": {
         type: String,
         required: true,
@@ -95,7 +101,17 @@ const Employee = mongoose.model('employees', employeeSchema);
 
 // Hiring an employee
 api.post("/hr/api/v1/employees", (req,res) => {
-
+    let emp = req.body;
+    emp._id = emp.identityNo;
+    let employee = new Employee(emp);
+    employee.save((err, newemp) => { // async
+        res.set("Content-Type", "application/json");
+        if (err) {
+            res.status(400).send({"status": err})
+        } else {
+            res.status(200).send(newemp);
+        }
+    });
 });
 
 // Updating an employee
@@ -116,7 +132,19 @@ api.delete("/hr/api/v1/employees/:identity", (req,res) => {
 
 // Querying the employee for the given identity
 api.get("/hr/api/v1/employees/:identity", (req,res) => {
-
+   let identity = req.params.identity;
+   Employee.findOne( // async
+       {"identityNo": identity},
+       {"_id": false},
+       (err,emp) => {
+           res.set("Content-Type", "application/json");
+           if (err) {
+               res.status(404).send({"status": "Not found"});
+           } else {
+               res.status(200).send(emp);
+           }
+       }
+   )
 });
 
 // Querying the employees with pagination
