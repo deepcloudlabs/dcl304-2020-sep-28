@@ -6,7 +6,8 @@ const mongo_opts = { // Dictionary
     "useNewUrlParser": true,
     "socketTimeoutMS": 0,
     "keepAlive": true,
-    useUnifiedTopology: true
+    "useCreateIndex": true,
+    "useUnifiedTopology": true
 };
 mongoose.connect(mongodb_url, mongo_opts);
 
