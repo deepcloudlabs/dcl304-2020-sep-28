@@ -1,0 +1,15 @@
+{
+  "name": "hr-backend",
+  "version": "1.0.0",
+  "dependencies": {
+    "mongoose": "^5.10.7",
+    "express": "^4.17.1",
+    "swagger-ui-express": "^4.1.4",
+    "body-parser": "^1.19.0",
+    "debug": "^4.2.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
