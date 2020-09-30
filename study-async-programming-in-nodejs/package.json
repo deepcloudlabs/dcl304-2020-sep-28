@@ -8,5 +8,8 @@
     "test": "node server.js"
   },
   "author": "Binnur Kurt <binnur.kurt@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
 }
