@@ -2,11 +2,10 @@ import mongoose from "mongoose";
 import utils from "./utils";
 
 const mongodb_url = "mongodb://localhost:27017/hrdb";
-const mongo_opts = {
-    "UseNewUrlParser": true,
+const mongo_opts = { // Dictionary
+    "useNewUrlParser": true,
     "socketTimeoutMS": 0,
     "keepAlive": true,
-    "reconnectTries": 10,
     useUnifiedTopology: true
 };
 mongoose.connect(mongodb_url, mongo_opts);
@@ -37,7 +36,7 @@ const employeeSchema = new mongoose.Schema({
         required: true,
         unique: true,
         validate: [
-            utils.ibanValidator(),
+            utils.ibanValidator,
             'You must provide a valid iban'
         ]
     },
