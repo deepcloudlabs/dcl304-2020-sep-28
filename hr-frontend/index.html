@@ -65,10 +65,10 @@
                     <select id="department"
                            data-bind="value: employee.department"
                             class="form-control">
-                        <option>FINANCE</option>
+                        <option>Finance</option>
                         <option>HR</option>
                         <option>IT</option>
-                        <option>SALES</option>
+                        <option>Sales</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -89,11 +89,12 @@
                     <label class="control-label"
                            for="photo">Photo</label>
                     <img  id="photo"
-                          data-bind="attr: {src: employee.photo}"
+                          data-bind="attr: {src: fileData().dataUrl}"
                          class="thumbnail"
                          style="width: 64px;"/>
                     <label class="btn btn-info">
                         <input type="file"
+                               data-bind="fileInput: fileData"
                                style="display: none;"
                                class="form-control"/>
                         <span>File</span>
@@ -140,7 +141,8 @@
                             <th>Operations</th>
                         </tr>
                     </thead>
-                    <tbody data-bind="foreach: {data: employees, as: 'emp'}">
+                    <tbody>
+                        <!-- ko foreach: {data: employees, as: 'emp'}-->
                         <tr>
                             <td data-bind="text: $index() + 1"></td>
                             <td><img class="photo" data-bind="attr: {src: emp.photo}"></td>
@@ -151,7 +153,14 @@
                             <td data-bind="text: emp.fulltime ? 'FULL-TIME' : 'PART-TIME'"></td>
                             <td data-bind="text: emp.birthYear"></td>
                             <td data-bind="text: emp.department"></td>
-                            <td><button class="btn btn-xs btn-danger">Delete</button> </td>
+                            <td><button data-bind="click: $root.fireEmployeeAtRow" class="btn btn-danger">Delete</button> </td>
+                        </tr>
+                        <!-- /ko -->
+                        <tr>
+                            <td colspan="3"></td>
+                            <td>Total Salary</td>
+                            <td data-bind="text: totalSalary"></td>
+                            <td colspan="5"></td>
                         </tr>
                     </tbody>
                 </table>

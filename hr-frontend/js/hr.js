@@ -39,6 +39,14 @@ class HrViewModel {
     constructor() {
         this.employee = new Employee();
         this.employees = ko.observableArray([]);
+        this.totalSalary = ko.computed(() =>{ // Vuejs
+            console.log("Computing total salary.")
+            return this.employees().map(emp => Number(emp.salary))
+                .reduce( (sum,salary) => sum + salary , 0 );
+        })
+        this.fileData = ko.observable({
+            dataUrl: ko.observable(AppConfig.NO_IMAGE)
+        })
     }
 
     findAll = () => {
@@ -50,25 +58,74 @@ class HrViewModel {
     findEmployeeByIdentity = () => {
         fetch(`${AppConfig.REST_API_BASE_URL}/employees/${this.employee.identityNo()}`)
             .then(res => res.json())
-            .then(employee => this.employee.update_es7(employee))
-            .catch(err => toastr.error(err))
+            .then(emp => {
+                this.fileData().dataUrl(emp.photo == null ? AppConfig.NO_IMAGE : emp.photo);
+                this.employee.update_es7(emp);
+            })
+            .catch(toastr.error)
     }
 
     hireEmployee = () => {
+        let body = ko.toJS(this.employee);
+        body.photo = this.fileData().dataUrl();
         fetch(
             `${AppConfig.REST_API_BASE_URL}/employees`,
             {
                 method: "POST",
-                body: ko.toJSON(this.employee),
+                body: JSON.stringify(body),
                 headers: new Headers({"Content-Type": "application/json"})
             }
-        ).then(status => toastr.success("Employee is hired!"));
+        ).then(status => toastr.success("Employee is hired!"))
+            .catch(toastr.error);
     }
 
     fireEmployee = () => {
-
+        fetch(
+            `${AppConfig.REST_API_BASE_URL}/employees/${this.employee.identityNo()}`,
+            {
+                method: "DELETE",
+                headers: new Headers({"Accept": "application/json"})
+            }
+        ).then(emp => emp.json())
+            .then(emp => {
+                toastr.success("Employee is fired!");
+                this.fileData().dataUrl(emp.photo == null ? AppConfig.NO_IMAGE : emp.photo);
+                this.employee.update_es7(emp);
+            }).catch(toastr.error);
     }
-    updateEmployee = () => {
 
+    fireEmployeeAtRow = (row) => {
+        fetch(
+            `${AppConfig.REST_API_BASE_URL}/employees/${row.identityNo}`,
+            {
+                method: "DELETE",
+                headers: new Headers({"Accept": "application/json"})
+            }
+        ).then(emp => emp.json())
+            .then(emp => {
+                toastr.success("Employee is fired!");
+                let filteredEmployees = this.employees().filter(e => e.identityNo != row.identityNo);
+                this.employees(filteredEmployees);
+                this.fileData().dataUrl(emp.photo == null ? AppConfig.NO_IMAGE : emp.photo);
+                this.employee.update_es7(emp);
+            }).catch(toastr.error);
+    }
+
+    updateEmployee = () => {
+        let body = ko.toJS(this.employee);
+        body.photo = this.fileData().dataUrl();
+        fetch(
+            `${AppConfig.REST_API_BASE_URL}/employees`,
+            {
+                method: "PUT",
+                body: JSON.stringify(body),
+                headers: new Headers({"Content-Type": "application/json"})
+            }
+        ).then(status => {
+            toastr.success("Employee is updated!")   ;
+            let filtered = this.employees().filter(e => e.identityNo !=body.identityNo);
+            filtered.push(body);
+            this.employees(filtered);
+        }).catch(toastr.error);
     }
 };
