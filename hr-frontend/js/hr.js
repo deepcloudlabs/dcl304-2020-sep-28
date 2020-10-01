@@ -53,7 +53,7 @@ class HrViewModel {
             .then(employee => this.employee.update_es7(employee))
             .catch(err => toastr.error(err))
     }
-    
+
     hireEmployee = () => {
         fetch(
             `${AppConfig.REST_API_BASE_URL}/employees`,
