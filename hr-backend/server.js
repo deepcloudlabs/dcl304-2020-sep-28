@@ -222,7 +222,7 @@ api.get("/hr/api/v1/employees", (req, res) => {
 let server = api.listen(port);
 let io = require("socket.io").listen(server);
 io.set("origins", "*:*");
-io.on("connection", socket => {
+io.on("connect", socket => {
     sockets.push(socket);
     socket.on("disconnect", () => {
         let index = sockets.indexOf(socket);
