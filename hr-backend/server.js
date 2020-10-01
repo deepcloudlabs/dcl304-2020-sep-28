@@ -5,7 +5,6 @@ import logger from "morgan";
 import express from "express";
 import swaggerUi from "swagger-ui-express";
 import openApiDoc from "./swagger-hr-api.json";
-
 /*
     Creating REST Api using Express.js
  */
@@ -14,6 +13,10 @@ const api = express();
 const updatableFields = [
     "salary", "photo", "department", "fulltime", "iban"
 ];
+
+const sockets = [];
+
+
 /*
     REST API Configuration
  */
@@ -111,6 +114,7 @@ api.post("/hr/api/v1/employees", (req, res) => {
         if (err) {
             res.status(400).send({"status": err})
         } else {
+            sockets.forEach(socket => socket.emit('hire', newemp));
             res.status(200).send(newemp);
         }
     });
@@ -156,6 +160,7 @@ api.delete("/hr/api/v1/employees/:identity", (req, res) => {
             if (err) {
                 res.status(404).send({"status": err})
             } else {
+                sockets.forEach(socket => socket.emit('fire', emp));
                 res.status(200).send(emp);
             }
         }
@@ -179,6 +184,21 @@ api.get("/hr/api/v1/employees/:identity", async (req, res) => {
     )
 });
 
+// Querying the employee for the given identity
+api.get("/hr/api/v1/employees2/:identity", async (req, res) => {
+    let identity = req.params.identity;
+    console.log(identity)
+    try {
+        Employee.findOne( // async
+            {"identityNo": identity},
+            {"_id": false}
+        ).exec().then(emp => res.status(200).send(emp));
+    } catch (err) {
+        // err.stack
+        res.status(404).send({"status": "Not found"})
+    }
+});
+
 // Querying the employees with pagination
 // http get http://localhost:9001/hr/api/v1/employees?page=10&size=15
 api.get("/hr/api/v1/employees", (req, res) => {
@@ -199,5 +219,14 @@ api.get("/hr/api/v1/employees", (req, res) => {
     );
 });
 
-api.listen(port);
-console.log(`REST Api is up and running at port (${port}).`);
+let server = api.listen(port);
+let io = require("socket.io").listen(server);
+io.set("origins", "*:*");
+io.on("connection", socket => {
+    sockets.push(socket);
+    socket.on("disconnect", () => {
+        let index = sockets.indexOf(socket);
+        if (index >= 0) sockets.splice(index, 1);
+    });
+});
+console.log(`REST on Http/Websocket Api is up and running at port (${port}).`);
