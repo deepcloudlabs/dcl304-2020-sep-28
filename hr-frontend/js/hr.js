@@ -47,6 +47,20 @@ class HrViewModel {
         this.fileData = ko.observable({
             dataUrl: ko.observable(AppConfig.NO_IMAGE)
         })
+        this.socket = io(AppConfig.WEBSOCKET_URL)
+        this.socket.on('connect', () => {
+            toastr.success("Connected to the websocket server!");
+            this.socket.on('fire', (emp)=>{
+                let filteredEmployees = this.employees().filter(e => e.identityNo != emp.identityNo);
+                this.employees(filteredEmployees);
+                toastr.success(`${emp.fullname} is fired!`);
+            });
+            this.socket.on('hire', (emp)=>{ // Observer Pattern: observes "hire" events
+                this.employees.push(emp);
+                toastr.success(`${emp.fullname} is hired!`);
+            });
+
+        })
     }
 
     findAll = () => {
@@ -104,8 +118,6 @@ class HrViewModel {
         ).then(emp => emp.json())
             .then(emp => {
                 toastr.success("Employee is fired!");
-                let filteredEmployees = this.employees().filter(e => e.identityNo != row.identityNo);
-                this.employees(filteredEmployees);
                 this.fileData().dataUrl(emp.photo == null ? AppConfig.NO_IMAGE : emp.photo);
                 this.employee.update_es7(emp);
             }).catch(toastr.error);
