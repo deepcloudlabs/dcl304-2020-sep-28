@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7e4aea18-86ba-41d2-ac6e-39ec0509ab16" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/frontend-vue.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/toastr.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/hr-config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/hr-util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/jquery-1.11.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/toastr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/.idea/frontend-vue.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/css/hr.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/css/toastr.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/js/lib/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/js/lib/jquery-1.11.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/js/lib/toastr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuejs.frontend/js/lib/vue.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-1088" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
+  </component>
+  <component name="ProjectId" id="1iJnJPgcCy1RFRFE4NjXbef6KzA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\stage\var\workspace\omega310\omega310-2018-nov-19\hr-frontend-vue\js" />
+      <recent name="C:\stage\var\workspace\omega310\omega310-2018-sep-17\hr\frontend-vue\js\lib" />
+      <recent name="C:\stage\var\workspace\omega310\omega310-2018-sep-17\hr\frontend-vue" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e4aea18-86ba-41d2-ac6e-39ec0509ab16" name="Default Changelist" comment="" />
+      <created>1537423434826</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537423434826</updated>
+      <workItem from="1537423436030" duration="1016000" />
+      <workItem from="1542877406648" duration="6620000" />
+      <workItem from="1543021230199" duration="464000" />
+      <workItem from="1601634490798" duration="39000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
