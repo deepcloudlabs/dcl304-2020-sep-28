@@ -6,7 +6,7 @@ export default class Employee extends React.Component {
         return (
             <div className="card">
                 <div className="card-header">
-                    <h4 className="card-title">Employee Panel</h4>
+                    <h4 className="card-title">*Employee Panel*</h4>
                 </div>
                 <div className="card-body">
                     <div className="form-group">

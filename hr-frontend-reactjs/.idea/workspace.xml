@@ -2,43 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc4dadc5-6d98-415e-8494-4e6468010b7c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../hr-frontend-ko/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/.idea/hr-frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/.idea/hr-frontend-ko.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/.idea/watcherTasks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/css/bootstrap-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/css/bootstrap-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/css/bootstrap-theme.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/css/bootstrap-theme.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/css/drag-and-drop.css" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/css/drag-and-drop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/css/toastr.css" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/css/toastr.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/es7-object.methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/es7-object.methods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/hr-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/hr-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/hr-util.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/hr-util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/hr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/lib/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/lib/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/lib/i18next-1.7.7.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/lib/i18next-1.7.7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/lib/jquery-1.11.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/lib/jquery-1.11.3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/lib/knockout-3.4.2.debug.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/lib/knockout-3.4.2.debug.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/lib/knockout-localization.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/lib/knockout-localization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/lib/knockout.validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/lib/knockout.validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/lib/ko-file.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/lib/ko-file.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/lib/socket.io.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/lib/socket.io.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/js/lib/toastr.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/js/lib/toastr.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/resources/translation-en.json" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/resources/translation-en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/resources/translation-tr.json" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/resources/translation-tr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hr-frontend/study-new-object-methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-ko/study-new-object-methods.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hr-frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hr-frontend-angular/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-angular/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hr-frontend-vue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hr-frontend-vue/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +32,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -119,7 +88,7 @@
       <updated>1565095718119</updated>
       <workItem from="1565095719325" duration="27552000" />
       <workItem from="1601633933092" duration="486000" />
-      <workItem from="1601634434170" duration="474000" />
+      <workItem from="1601634434170" duration="1932000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1601634474478</created>
@@ -135,6 +104,7 @@
     <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
@@ -158,21 +128,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="260" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040/-1920.-523.1920.1040@0.0.1920.1040" timestamp="1601634488209" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1601634423742">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1601640597179">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040/-1920.-523.1920.1040@0.-1080.1920.1040" timestamp="1601640597179" />
     <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040/-1920.-523.1920.1040@0.0.1920.1040" timestamp="1601634423742" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1601634423742">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1601640597179">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040/-1920.-523.1920.1040@0.-1080.1920.1040" timestamp="1601640597179" />
     <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040/-1920.-523.1920.1040@0.0.1920.1040" timestamp="1601634423742" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1601634423741">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1601640597178">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040/-1920.-523.1920.1040@0.-1080.1920.1040" timestamp="1601640597178" />
     <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040/-1920.-523.1920.1040@0.0.1920.1040" timestamp="1601634423741" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1601634423742">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1601640597179">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040/-1920.-523.1920.1040@0.-1080.1920.1040" timestamp="1601640597179" />
     <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040/-1920.-523.1920.1040@0.0.1920.1040" timestamp="1601634423742" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1601634447057">
       <screen x="0" y="0" width="1920" height="1040" />
