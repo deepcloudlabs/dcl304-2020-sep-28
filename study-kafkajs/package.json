@@ -1,0 +1,13 @@
+{
+  "name": "study-kafkajs",
+  "version": "1.0.0",
+  "main": "producer.js",
+  "scripts": {
+    "producer": "node producer.js",
+    "consumer": "node consumer.js",
+    "create-topic": "node create-topic.js"
+  },
+  "dependencies": {
+    "kafkajs": "1.14.0"
+  }
+}
